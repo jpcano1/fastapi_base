@@ -12,6 +12,33 @@ fastapi = "^0.85.0"
 uvicorn = "^0.18.3"
 
 
+[tool.poetry.group.dev.dependencies]
+flake8 = "^5.0.4"
+pre-commit = "^2.20.0"
+mypy = "^0.971"
+isort = "^5.10.1"
+black = "^22.8.0"
+pydocstyle = "^6.1.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length=100
+target-version=['py310']
+skip-string-normalization=true
+exclude='''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | env | venv | .venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''
