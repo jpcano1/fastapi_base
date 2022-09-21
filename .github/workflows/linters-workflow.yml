@@ -1,0 +1,32 @@
+name: Build, Test and Linters.
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!develop"
+      - "!master"
+
+jobs:
+  install:
+    name: Static Code Analysis.
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Permissions,
+        run: |-
+          chmod +x ./dev/tools.sh
+          chmod +x ./dev/linters.sh
+        if: always()
+
+      - name: Build Docker image.
+        run: ./dev/tools.sh build
+        if: always()
+
+      - name: Run Linters.
+        run: |-
+          export ENV=dev
+          ./dev/linters.sh
+        if: always()
