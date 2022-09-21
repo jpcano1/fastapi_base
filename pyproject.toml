@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "fastapi-base"
+version = "0.1.0"
+description = ""
+authors = ["Juan Pablo <jp.cano@uniandes.edu.co>"]
+readme = "README.md"
+packages = [{include = "fastapi_base"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.0"
+uvicorn = "^0.18.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
