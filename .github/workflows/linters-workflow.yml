@@ -27,6 +27,6 @@ jobs:
 
       - name: Run Linters.
         run: |-
-          export ENV=dev
+          export ENV=docker
           ./dev/linters.sh
         if: always()
