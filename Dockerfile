@@ -32,7 +32,7 @@ COPY poetry.lock pyproject.toml ./
 # install runtime deps - uses $POETRY_VIRTUALENVS_IN_PROJECT internally
 ARG ENV
 RUN if [ "$ENV" = "dev" ]; then echo 'Build with dev-dependencies' \
-    && poetry install; else poetry install --no-dev; fi
+    && poetry install; else poetry install --only main; fi
 
 FROM base-image AS production-image
 
