@@ -7,4 +7,4 @@ class HealthCheck(BaseModel):
     """Model health check."""
 
     status_code: int = Field(..., example=status.HTTP_200_OK)
-    api_version = Field(..., example="0.1.0")
+    api_version: str = Field(..., example="0.1.0")
