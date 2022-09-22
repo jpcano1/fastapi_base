@@ -36,7 +36,7 @@
 
 ## **Installation**
 ### **Via Poetry**
-- Be sure you are running on Poetry version 1.1.7 or greater. Install via `poetry install`
+- Be sure you are running on Poetry version 1.2 or greater. Install via `poetry install`
 ### **Via docker**
 1. Add permission to build script `chmod +x ./dev/tools.sh`
 2. Execute `./dev/tools.sh build`
