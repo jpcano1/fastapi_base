@@ -34,9 +34,9 @@ ARG ENV
 RUN if [ "$ENV" = "dev" ]; then echo 'Build with dev-dependencies' \
     && poetry install; else poetry install --no-dev; fi
 
-FROM base-image AS production
+FROM base-image AS production-image
 
-ENV APP_DIR /big_data_api
+ENV APP_DIR /app
 WORKDIR $APP_DIR
 COPY --from=builder-image $PYSETUP_PATH $PYSETUP_PATH
 COPY . .
