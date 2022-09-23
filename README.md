@@ -25,6 +25,7 @@
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── CHANGELOG.md
+├── docker-compose.yml
 ├── Dockerfile
 ├── poetry.lock
 ├── poetry.toml
