@@ -36,7 +36,7 @@ RUN if [ "$ENV" = "dev" ]; then echo 'Build with dev-dependencies' \
 
 FROM base-image AS production-image
 
-ENV APP_DIR /app
+ENV APP_DIR /code
 WORKDIR $APP_DIR
 COPY --from=builder-image $PYSETUP_PATH $PYSETUP_PATH
 COPY . .

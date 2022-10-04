@@ -3,7 +3,7 @@
 ENV=${ENV:-'poetry'}
 IMAGE_NAME=${IMAGE_NAME:-"fastapi_base"}
 IMAGE_TAG=${DOCKER_IMAGE_TAG:-'dev'}
-VOLUME=$(pwd):/app
+VOLUME=$(pwd):/code
 
 if [ "$ENV" = "poetry" ]; then
     echo "Running on poetry"
